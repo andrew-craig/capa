@@ -1,0 +1,42 @@
+{{!< default}}
+{{#post}}
+	<header>
+		<nav class="main-navigation fixed-header">
+		    <h1 class="title fixed-title post-title">
+				<a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
+				<p class="post-title">    &gt;   {{title}}</p>
+			</h1>
+		</nav>
+	</header>
+	
+	<section class="post-section">
+
+		<script>
+			$(document).ready(function() {
+
+				$('img').each(function() {	
+					$(this).after("<div style='clear:both;'><!--clear--></div> ");
+		
+					if($(this).attr("caption")) {
+		        		$(this).after( "<p class='img-description' >"+ $(this).attr("caption") +"</p>");
+					}
+
+					if($(this).attr("alt")) {
+						$(this).after( "<p class='img-title' >" + $(this).attr("alt") + "</p>" ); 
+					}
+					
+				});
+			});
+		</script>
+	
+		
+		{{content}}
+		
+		<script language="JavaScript">
+			document.write("<a href='https://twitter.com/intent/tweet?screen_name=andrew_craig4&url=" + "{{url absolute="true"}}" + "'>");
+		</script>
+	    	  <img class="twitter-button" src="../assets/images/twitter.svg"> 
+		</a>
+		
+	</section>
+{{/post}}

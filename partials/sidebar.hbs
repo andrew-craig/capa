@@ -1,0 +1,25 @@
+		<div class="sidebar-overlay"></div>
+		<aside id="sidebar" class="sidebar sidebar-default sidebar-fixed-left" role="navigation">
+ 	    
+			<ul class="nav sidebar-nav">
+				<li class="sidebar-title">{{@blog.title}}</li>
+				<li class="divider"></li>
+
+				
+
+				{{#foreach navigation}}
+				      <li>
+				        <a href="{{url}}" title="{{label}}"> {{label}} </a>
+				      </li>  
+				{{/foreach}}
+				
+				<li><a href="{{@blog.url}}/vietnam-cambodia-13/">Vietnam '13</a></li>
+				<li><a href="{{@blog.url}}/california-2010/">California '10</a></li>
+
+				<li class="divider"></li>					
+
+				<li><a href="{{@blog.url}}/favourites/">Favourites</a></li>
+				<li><a href="{{@blog.url}}/rss/">RSS</a></li>
+
+	    	</ul>
+		</aside>

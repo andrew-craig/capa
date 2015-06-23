@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+  <head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}">
+
+	<link href="{{asset "css/screen.css"}}" type="text/css" rel="stylesheet" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic" rel='stylesheet' type='text/css'>
+
+	<link rel="icon" type="image/png" href="{{asset "/images/favicon_64x64.png"}}" sizes="64x64">
+	<link rel="icon" type="image/png" href="{{asset "/images/favicon_32x32.png"}}" sizes="32x32">
+
+	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+
+	{{ghost_head}}
+
+	<script src="{{asset "js/jquery.min.js"}}"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+  </head>
+
+  <body class="{{body_class}}">
+	  
+  	{{{body}}}
+
+  	<footer>
+  		<small>
+  			&copy; {{date format="YYYY"}} {{@blog.title}} on <a href="https://ghost.org/">Ghost</a> with Capa.
+  		</small>
+  	</footer>
+
+  	{{ghost_foot}}
+	
+	<div id="mobile-indicator"></div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+{{!< default}}
+
+	<script src="{{asset "js/scrollaction.js"}}"></script>
+	<script src="{{asset "js/sidebar.js"}}"></script>
+	
+
+	<header>
+			
+	
+    <!-- Top Bar -->
+		<nav class="main-navigation fade-header" 
+		{{#if @blog.cover}}
+		style="background: linear-gradient(rgba(0, 107, 176, 0),rgba(0, 107, 176, 0)), url({{@blog.cover}});"
+		{{else}}
+		style="background: linear-gradient(rgba(0, 107, 176, 0),rgba(0, 107, 176, 0)), url({{asset "images/header-background.jpg"}});"
+		{{/if}}
+		>
+			<div class="hamburger">
+				<img src="{{asset "images/hamburger.svg"}}">
+			</div>
+		
+			<h1 class="title">{{@blog.title}}</h1>
+
+		</nav>
+
+		<div class="title-spacing"></div>
+				
+	</header>
+
+	
+	{{> sidebar}}
+	
+    <!-- Succesful Update -->
+	
+	{{#foreach navigation}}
+	      <!-- COMMENT -->
+	{{/foreach}}
+	
+	
+    <section>
+		
+		
+		<ul class="rig">
+			{{#foreach posts}}
+				<li>
+					<a href="{{url}}">
+					<div class="img-cont">
+					  <img src="{{image}}" />
+					  <div class="rig-back">
+					  <h3>{{title}}</h3>
+				      </div>
+					</div>
+				    </a>
+				</li>
+			{{/foreach}}
+		</ul>
+		
+    </section>
+	
