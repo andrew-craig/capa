@@ -1,13 +1,13 @@
 /*
-Theme Name: Travels Around
-Theme URI: http://travelsaround.net/
+Theme Name: Capa
+Theme URI: https://github.com/andrew-craig/capa
 Author: andrcra
 Author URI: http://seatrain.co
 Description: A modern theme tailored for photography / travel blogs.
-Version: 1.0
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, right-sidebar, flexible-width, 
+Tags: one-column, right-sidebar, flexible-width,
 */
 
 html {
@@ -42,7 +42,7 @@ section, footer {
 }
 
 /*------------
-   Post 
+   Post
 ------------*/
 
 section.post-section {
@@ -82,13 +82,13 @@ img.twitter-button {
 	border-radius: 50%;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 	background-color: rgb(104, 198, 225);
-	
+
 }
 
 
 
 /*-----------
-   App Bar 
+   App Bar
 -----------*/
 
 nav.main-navigation {
@@ -128,7 +128,7 @@ h1 {
 	font-weight: bold;
 }
 
-h1 a, 
+h1 a,
 h1 a:visited {
 	text-decoration: none;
 	color: white;
@@ -162,7 +162,7 @@ div.title-spacing-fixed {
 
 
 /*------------
-   Side Bar 
+   Side Bar
 ------------*/
 
 .hamburger {
@@ -296,7 +296,7 @@ div.title-spacing-fixed {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
-	
+
 }
 
 .sidebar .sidebar-text:hover,
@@ -454,7 +454,7 @@ div.title-spacing-fixed {
 }
 
 /*--------------
-   Image Grid 
+   Image Grid
 --------------*/
 
 ul.rig {
@@ -474,7 +474,7 @@ ul.rig li {
 	width: 23.5%; /* this value + 2.5 should = 25% */
 }
 
-ul.rig li div.img-cont {	
+ul.rig li div.img-cont {
 	position: relative;
 	display: block;
 	border: none;
@@ -524,7 +524,7 @@ ul.rig li h3 {
 }
 
 /*-----------------------
-   Post Content 
+   Post Content
 -----------------------*/
 
 .post-section p {
@@ -551,7 +551,7 @@ p.img-description {
 }
 
 /*-----------------------
-   Footer 
+   Footer
 -----------------------*/
 
 footer {
@@ -563,7 +563,7 @@ footer a {
 }
 
 /*-----------------------
-   Mobile Optimization 
+   Mobile Optimization
 -----------------------*/
 
 #mobile-indicator {
@@ -580,24 +580,24 @@ footer a {
 	ul.rig li {
 	    width: 48.5%; /* two columns */
 	}
-	
+
 	h1.post-title {
 	    white-space: nowrap;
 	    overflow: hidden;
 	    text-overflow: ellipsis;
 		width: 90%;
 	}
-	
+
 	a.blog-title {
 		display: none;
 	}
-	
+
 	p.post-title {
 		text-overflow: ellipsis;
 	}
-	
+
 }
- 
+
 @media (max-width: 500px) {
 	nav.main-navigation {
 		width: 100%;
@@ -611,7 +611,7 @@ footer a {
 		z-index: 1;
 		background-image: none;
 	}
-	
+
 	section {
 		margin-top: 80px;
 	}
@@ -639,7 +639,7 @@ footer a {
 		width: 100% !important; /* over-ride all li styles */
 		margin: 0 0 20px;
 	}
-	
+
 	p.img-title {
 		font-size: 1.5em;
 		display: inline;
@@ -647,28 +647,27 @@ footer a {
 		margin-top: 0;
 		margin-bottom: 0.2em;
 	}
-	
+
 	p.img-description {
 		margin-left: 0;
 		font-size: 0.9em;
 		margin-bottom: 2em;
 		margin-top: 0.5em;
 	}
-	
+
 	img {
 		width: 100%;
 		float: none;
 		margin-bottom: 0.3em;
 	}
-	
+
 	img.twitter-button {
 		width: 9vh;
 		margin-bottom: 0;
 	}
-	
+
     #mobile-indicator {
         display: block;
     }
-	
-}
 
+}
