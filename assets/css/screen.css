@@ -21,7 +21,7 @@ header, body, section, footer, aside, nav, article, figure, figcaption {
 }
 
 body {
-	margin: 0px;
+	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 1.6em;
@@ -30,68 +30,10 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-/* Content */
-
-body {
-
-}
-
 section, footer {
 	margin-left: 5%;
 	margin-right: 5%;
 }
-
-/*------------
-   Post
-------------*/
-
-section.post-section {
-	margin-top: 80px;
-}
-
-h1.post-title {
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-p.post-title {
-	display: inline;
-}
-
-div.img-wrapper {
-	clear: both;
-	display: inline;
-}
-
-img {
-	width: 100%;
-	align: right;
-	float: left;
-	margin-top: 2.5em;
-	margin-bottom: 2.5em;
-}
-
-img.twitter-button {
-	float: none;
-	margin-bottom: 0;
-	position: fixed;
-	right: 3vh;
-	bottom: 3vh;
-	width: 9vh;
-	border-radius: 50%;
-	box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.28);
-	background-color: rgb(104, 198, 225);
-	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
-}
-
-img.twitter-button:hover {
-	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.31);
-}
-
-img.twitter-button:active {
-	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.36);
-}
-
 
 /*-----------
    App Bar
@@ -104,7 +46,7 @@ nav.main-navigation {
 	display: block;
 	top: 0;
 	margin-bottom: 2em;
-	box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+	box-shadow: rgba(0, 0, 0, 0.258824) 0 2px 5px 0;
 }
 
 .fade-header {
@@ -118,9 +60,9 @@ nav.fixed-header {
 	background-image: none;
 	height: 60px;
 	position: fixed;
-	top: 0px;
+	top: 0;
 	z-index: 1;
-	padding-bottom: 0px;
+	padding-bottom: 0;
 }
 
 /* Heading Text */
@@ -198,6 +140,7 @@ div.title-spacing-fixed {
   z-index: 1034;
   -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	-o-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -211,6 +154,7 @@ div.title-spacing-fixed {
   visibility: visible;
   -webkit-transition-delay: 0;
   -moz-transition-delay: 0;
+	-o-transition-delay: 0;
   transition-delay: 0;
 }
 
@@ -228,6 +172,7 @@ div.title-spacing-fixed {
   overflow-x: hidden;
   border: none;
   -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+	-moz-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
@@ -254,6 +199,8 @@ div.title-spacing-fixed {
 .sidebar::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #BFBFBF;
 }
 
@@ -282,7 +229,8 @@ div.title-spacing-fixed {
   text-overflow: ellipsis;
   white-space: nowrap;
   -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -308,7 +256,8 @@ div.title-spacing-fixed {
 .sidebar .sidebar-text:hover,
 .sidebar .sidebar-text:focus {
   -webkit-box-shadow: none;
-  box-shadow: none;
+  -moz-box-shadow: none;
+	box-shadow: none;
   outline: none;
 }
 
@@ -340,6 +289,7 @@ div.title-spacing-fixed {
   text-overflow: ellipsis;
   white-space: nowrap;
   -webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -347,6 +297,7 @@ div.title-spacing-fixed {
 .sidebar .sidebar-nav li a:hover,
 .sidebar .sidebar-nav li a:focus {
   -webkit-box-shadow: none;
+	-moz-box-shadow: none;
   box-shadow: none;
   outline: none;
 }
@@ -423,6 +374,9 @@ div.title-spacing-fixed {
 .sidebar {
   width: 0;
   -webkit-transform: translate3d(-280px, 0, 0);
+	-moz-transform: translate3d(-280px, 0, 0);
+	-o-transform: translate3d(-280px, 0, 0);
+	-ms-transform: translate3d(-280px, 0, 0);
   transform: translate3d(-280px, 0, 0);
 }
 
@@ -430,6 +384,9 @@ div.title-spacing-fixed {
   min-width: 280px;
   width: 280px;
   -webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -438,8 +395,9 @@ div.title-spacing-fixed {
   top: 0;
   bottom: 0;
   left: 0;
-  box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 2px 0 15px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 2px 0 15px rgba(0, 0, 0, 0.35);
+	box-shadow: 2px 0 15px rgba(0, 0, 0, 0.35);
   z-index: 1035;
 }
 
@@ -465,9 +423,9 @@ div.title-spacing-fixed {
 
 ul.rig {
 	list-style: none;
-	font-size: 0px;
+	font-size: 0;
 	margin-left: -1.5%; /* should match li left margin */
-	padding: 0px;
+	padding: 0;
 }
 
 ul.rig li {
@@ -505,11 +463,8 @@ ul.rig li img {
 	float: none;
 	display: block;
 	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0em;
-	margin-top: 0em;
-	padding-top: 0em;
+	margin: 0 auto auto 0;
+	padding-top: 0;
 }
 
 ul.rig li div.rig-back {
@@ -518,7 +473,6 @@ ul.rig li div.rig-back {
 	left: 0;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
-	display: inline;
 }
 
 ul.rig li h3 {
@@ -527,6 +481,94 @@ ul.rig li h3 {
 	padding: 10px 10px 10px 10px;
 	color: white;
 	display: block;
+}
+
+/*-----------------------
+   Load More
+-----------------------*/
+
+.loadmore {
+	height: 60px;
+	width: 100%;
+}
+
+.loadmorebutton {
+	margin: auto;
+	box-shadow: 0 0 3px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.24);
+	background: rgb(0, 107, 176);
+	color: rgb(255,255,255);
+	background-clip: border-box;
+	text-align: center;
+  padding: 0 18px;
+  border-radius: 2px;
+  height: 36px;
+	position: relative;
+	border: none;
+	font-size: 1.5rem;
+	font-weight: 700;
+	display: block;
+	margin-top: 14px;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+.loadmorebutton:hover {
+	box-shadow: 0 0 4px rgba(0,0,0,.16),0 4px 8px rgba(0,0,0,.28);
+}
+
+.loadmorebutton:active {
+	box-shadow: 0 0 6px rgba(0,0,0,.24),0 4px 10px rgba(0,0,0,.31);
+}
+
+/*------------
+   Post
+------------*/
+
+section.post-section {
+	margin-top: 80px;
+}
+
+h1.post-title {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+p.post-title {
+	display: inline;
+}
+
+div.img-wrapper {
+	clear: both;
+	display: inline;
+}
+
+img {
+	width: 100%;
+	float: left;
+	margin-top: 2.5em;
+	margin-bottom: 2.5em;
+}
+
+img.twitter-button {
+	float: none;
+	margin-bottom: 0;
+	position: fixed;
+	right: 3vh;
+	bottom: 3vh;
+	width: 9vh;
+	border-radius: 50%;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.28);
+	background-color: rgb(104, 198, 225);
+	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+img.twitter-button:hover {
+	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.31);
+}
+
+img.twitter-button:active {
+	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.36);
 }
 
 /*-----------------------
@@ -554,45 +596,6 @@ p.img-description {
 	margin-left: 104%;
 	width: 40%;
 	font-size: 0.9em;
-}
-
-/*-----------------------
-   Load More
------------------------*/
-
-nav.loadmore {
-	height: 60px;
-	width: 100%;
-}
-
-button.loadmorebutton {
-	margin: auto;
-	box-shadow: 0 0 3px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.24);
-	background: rgb(0, 107, 176);
-	color: rgb(255,255,255);
-	background-clip: border-box;
-	text-align: center;
-    padding: 0 18px;
-    border-radius: 2px;
-    height: 36px;
-	position: relative;
-	border: none;
-	font-size: 1.5rem;
-	font-weight: 700;
-	display: block;
-	margin-top: 14px;
-	outline: none;
-	vertical-align: middle;
-	cursor: pointer;
-	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
-}
-
-button.loadmorebutton:hover {
-	box-shadow: 0 0 4px rgba(0,0,0,.16),0 4px 8px rgba(0,0,0,.28);
-}
-
-button.loadmorebutton:active {
-	box-shadow: 0 0 6px rgba(0,0,0,.24),0 4px 10px rgba(0,0,0,.31);
 }
 
 /*-----------------------
