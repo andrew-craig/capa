@@ -47,12 +47,13 @@ nav.main-navigation {
 	top: 0;
 	margin-bottom: 2em;
 	box-shadow: rgba(0, 0, 0, 0.258824) 0 2px 5px 0;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
 }
 
-.fade-header {
-	background: linear-gradient(rgba(0, 107, 176, 0),rgba(0, 107, 176, 0)), url("../images/header-background.jpg");
-	background-repeat: no-repeat;
-	background-position: right top;
+nav.fade-header {
+	background-size: cover;
 }
 
 nav.fixed-header {
@@ -87,7 +88,7 @@ h1 a:active {
 }
 
 .title {
-    margin-top: 0;
+  margin-top: 0;
 	margin-left: 50px;
 	padding-top: 125px;
 	color: white;
@@ -97,7 +98,7 @@ h1 a:active {
 
 .fixed-title {
 	position: fixed;
-    padding-top: 12.5px;
+  padding-top: 12.5px;
 	font-size: 1.6em;
 	font-weight: normal;
 	vertical-align: middle;

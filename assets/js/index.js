@@ -22,7 +22,7 @@ function adjustTitle() {
 		bar = $('.main-navigation'),
 		titleSpacing = $('.title-spacing'),
 		title = $('.title'),
-	  size = (((190 - scroll)/ (190 - 112.5)) * 1.4) + 1.6,
+	    size = (((190 - scroll)/ (190 - 112.5)) * 1.4) + 1.6,
 		opac = (scroll - 100)/ 95;
 
 	if (scroll >= 190) {
@@ -34,8 +34,8 @@ function adjustTitle() {
 	}
 
 	$('.fade-header').css(
-		{'background': 'linear-gradient(rgba(0, 107, 176,' + opac + '),rgba(0, 107, 176,' + opac + ')), url("../assets/images/header-background.jpg")', 'background-repeat': 'no-repeat', 'background-position': 'right top'
-		}
+		{'background': 'linear-gradient(rgba(0, 107, 176,' + opac + '),rgba(0, 107, 176,' + opac + ')), url("../assets/images/header-background.jpg")', 'background-repeat': 'no-repeat', 'background-position': 'left top', 'background-size': 'cover'
+	}
 	);
 
 	if (scroll >= 112.5) {
@@ -65,8 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		bar.addClass('fixed-header');
 		$('.fade-header').css(
-			{'background': 'linear-gradient(rgba(0, 107, 176, 1),rgba(0, 107, 176, 1)), url("../assets/images/header-background.jpg")', 'background-repeat': 'no-repeat', 'background-position': 'right top'
-			}
+			{'background': 'linear-gradient(rgba(0, 107, 176, 1),rgba(0, 107, 176, 1))'}
 		);
 	}
 }, false);
