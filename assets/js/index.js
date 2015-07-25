@@ -90,6 +90,8 @@ $(window).scroll( scrollFunction );
 
 $(document).ready(function() {
     var overlay = $('.sidebar-overlay');
+    var page = 2;
+	var url_blog = window.location;
 
     $('.hamburger').on('click', function() {
         var sidebar = $('#sidebar');
@@ -105,5 +107,23 @@ $(document).ready(function() {
         $(this).removeClass('active');
         $('#sidebar').removeClass('open');
     });
+	
 
+    $('.loadmorebutton').on('click', function() {
+    	$.get((url_blog+'/page/'+page),
+  	  	function(content) {
+			console.log(content);
+			if(page <= max_pages){
+				console.log("if = true");
+				console.log($(content).find('.post'));
+				$('.rig').append($(content).find('.post'));
+				console.log(page);
+				page = page + 1;
+			} 
+			if(page >= max_pages){
+				$('.loadmore').css({'display': 'none'});
+			}
+		});
+	});
+	
 });

@@ -1,6 +1,6 @@
 {{!< default}}
 
-	<script src="{{asset "js/index.js"}}"></script>
+
 
 	<header>
 
@@ -33,7 +33,7 @@
 
 		<ul class="rig">
 			{{#foreach posts}}
-				<li>
+				<li class="post">
 					<a href="{{url}}">
 					<div class="img-cont">
 					  <img src="{{image}}" />
@@ -45,5 +45,12 @@
 				</li>
 			{{/foreach}}
 		</ul>
+		
+	<nav class="loadmore" role="navigation">
+		<button class="loadmorebutton">Load More</button>
+	</nav>
 
     </section>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="{{asset "js/index.js"}}"></script>	

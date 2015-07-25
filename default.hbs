@@ -17,7 +17,6 @@
 	<link rel="icon" type="image/png" href="{{asset "/images/favicon_32x32.png"}}" sizes="32x32">
 
 	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	{{ghost_head}}
 
@@ -36,5 +35,8 @@
   	{{ghost_foot}}
 
 	<div id="mobile-indicator"></div>
+    <script>
+    var max_pages = parseInt('{{pagination.pages}}');
+    </script>
 	</body>
 </html>

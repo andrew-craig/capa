@@ -72,7 +72,6 @@ img {
 }
 
 img.twitter-button {
-	align: none;
 	float: none;
 	margin-bottom: 0;
 	position: fixed;
@@ -80,11 +79,18 @@ img.twitter-button {
 	bottom: 3vh;
 	width: 9vh;
 	border-radius: 50%;
-	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.28);
 	background-color: rgb(104, 198, 225);
-
+	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
 }
 
+img.twitter-button:hover {
+	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.31);
+}
+
+img.twitter-button:active {
+	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.36);
+}
 
 
 /*-----------
@@ -548,6 +554,45 @@ p.img-description {
 	margin-left: 104%;
 	width: 40%;
 	font-size: 0.9em;
+}
+
+/*-----------------------
+   Load More
+-----------------------*/
+
+nav.loadmore {
+	height: 60px;
+	width: 100%;
+}
+
+button.loadmorebutton {
+	margin: auto;
+	box-shadow: 0 0 3px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.24);
+	background: rgb(0, 107, 176);
+	color: rgb(255,255,255);
+	background-clip: border-box;
+	text-align: center;
+    padding: 0 18px;
+    border-radius: 2px;
+    height: 36px;
+	position: relative;
+	border: none;
+	font-size: 1.5rem;
+	font-weight: 700;
+	display: block;
+	margin-top: 14px;
+	outline: none;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+button.loadmorebutton:hover {
+	box-shadow: 0 0 4px rgba(0,0,0,.16),0 4px 8px rgba(0,0,0,.28);
+}
+
+button.loadmorebutton:active {
+	box-shadow: 0 0 6px rgba(0,0,0,.24),0 4px 10px rgba(0,0,0,.31);
 }
 
 /*-----------------------
