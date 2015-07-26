@@ -48,7 +48,7 @@ nav.main-navigation {
 	margin-bottom: 2em;
 	box-shadow: rgba(0, 0, 0, 0.258824) 0 2px 5px 0;
 	background-repeat: no-repeat;
-	background-position: left top;
+	background-position: center center;
 	background-size: cover;
 }
 
@@ -57,7 +57,8 @@ nav.fade-header {
 }
 
 nav.fixed-header {
-	background-color: rgb(0, 107, 176);
+/*	background-color: rgb(0, 107, 176); */
+  background-color: rgb(30, 30, 30);
 	background-image: none;
 	height: 60px;
 	position: fixed;
@@ -84,7 +85,7 @@ h1 a:visited {
 }
 
 h1 a:active {
-	color: black;
+	color: rgb(175, 175, 175);
 }
 
 .title {
@@ -243,7 +244,7 @@ div.title-spacing-fixed {
 	height: 46px;
 	line-height: 46px;
     padding-left: 16px;
-	color: rgb(0, 107, 176);
+	color: #1E1E1E;
 	padding-top: 5px;
     text-decoration: none;
     clear: both;
@@ -496,11 +497,11 @@ ul.rig li h3 {
 .loadmorebutton {
 	margin: auto;
 	box-shadow: 0 0 3px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.24);
-	background: rgb(0, 107, 176);
+	background: #D32F2F;
 	color: rgb(255,255,255);
 	background-clip: border-box;
 	text-align: center;
-  padding: 0 18px;
+  padding: 0 25px;
   border-radius: 2px;
   height: 36px;
 	position: relative;
