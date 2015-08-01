@@ -78,8 +78,6 @@ $(window).scroll( scrollFunction );
 
 $(document).ready(function() {
     var overlay = $('.sidebar-overlay');
-    var page = 2;
-	var url_blog = window.location;
 
     $('.hamburger').on('click', function() {
         var sidebar = $('#sidebar');

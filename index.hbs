@@ -43,11 +43,11 @@
 			{{/foreach}}
 		</ul>
 		
-	<nav class="loadmore" role="navigation">
-		<button class="loadmorebutton">Load More</button>
-	</nav>
+	{{pagination}}
 
     </section>
-	
+    <script>
+    var max_pages = parseInt('{{pagination.pages}}');
+    </script>
 	<script src="{{asset "js/index.js"}}"></script>	
 	<script src="{{asset "js/loadMore.js"}}"></script>	
