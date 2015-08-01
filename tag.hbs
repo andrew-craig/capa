@@ -1,39 +1,21 @@
 {{!< default}}
 
-	<script src="{{asset "js/script.js"}}"></script>
-	<script src="{{asset "js/sidebar.js"}}"></script>
-	
-
 	<header>
-			
-	
-    <!-- Top Bar -->
-		<nav class="main-navigation fade-header" 
-		{{#if @blog.cover}}
-		style="background: linear-gradient(rgba(0, 107, 176, 0),rgba(0, 107, 176, 0)), url({{@blog.cover}});"
-		{{else}}
-		style="background: linear-gradient(rgba(0, 107, 176, 0),rgba(0, 107, 176, 0)), url({{asset "images/header-background.jpg"}});"
-		{{/if}}
-		>
-			<div class="hamburger">
-				<img src="../assets/images/hamburger.svg">
-			</div>
 		
-			<h1 class="title">{{@blog.title}}</h1>
-
+		<nav class="main-navigation fixed-header">
+		    <h1 class="title fixed-title post-title">
+				<a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
+				<p class="post-title">    &gt;   {{#tag}}{{name}}{{/tag}}</p>
+			</h1>
 		</nav>
 
-		<div class="title-spacing"></div>
-				
 	</header>
 
-	
-	{{> sidebar}}
-	
-    <section>
+    <section class="post-section">
+
 		<ul class="rig">
 			{{#foreach posts}}
-				<li>
+				<li class="post">
 					<a href="{{url}}">
 					<div class="img-cont">
 					  <img src="{{image}}" />
@@ -44,5 +26,12 @@
 				    </a>
 				</li>
 			{{/foreach}}
-		</ul>	
+		</ul>
+		
+	<nav class="loadmore" role="navigation">
+		<button class="loadmorebutton">Load More</button>
+	</nav>
+
     </section>
+	
+	<script src="{{asset "js/loadMore.js"}}"></script>

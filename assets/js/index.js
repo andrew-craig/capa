@@ -76,17 +76,6 @@ var scrollFunction = debounce(function() {
 
 $(window).scroll( scrollFunction );
 
-/**
- * Created by Kupletsky Sergey on 17.10.14.
- *
- * Material Sidebar (Profile menu)
- * Tested on Win8.1 with browsers: Chrome 37, Firefox 32, Opera 25, IE 11, Safari 5.1.7
- * You can use this sidebar in Bootstrap (v3) projects. HTML-markup like Navbar bootstrap component will make your work easier.
- * Dropdown menu and sidebar toggle button works with JQuery and Bootstrap.min.js
- */
-
-// Toggle Sidebar
-
 $(document).ready(function() {
     var overlay = $('.sidebar-overlay');
     var page = 2;
@@ -106,23 +95,4 @@ $(document).ready(function() {
         $(this).removeClass('active');
         $('#sidebar').removeClass('open');
     });
-	
-
-    $('.loadmorebutton').on('click', function() {
-    	$.get((url_blog+'/page/'+page),
-  	  	function(content) {
-			console.log(content);
-			if(page <= max_pages){
-				console.log("if = true");
-				console.log($(content).find('.post'));
-				$('.rig').append($(content).find('.post'));
-				console.log(page);
-				page = page + 1;
-			} 
-			if(page >= max_pages){
-				$('.loadmore').css({'display': 'none'});
-			}
-		});
-	});
-	
 });
