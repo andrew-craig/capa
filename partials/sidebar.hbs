@@ -5,13 +5,7 @@
 				<li class="sidebar-title">{{@blog.title}}</li>
 				<li class="divider"></li>
 
-				
-
-				{{#foreach navigation}}
-				      <li>
-				        <a href="{{url}}" title="{{label}}"> {{label}} </a>
-				      </li>  
-				{{/foreach}}
+				{{navigation}}
 				
 				<li><a href="{{@blog.url}}/vietnam-cambodia-13/">Vietnam '13</a></li>
 				<li><a href="{{@blog.url}}/california-2010/">California '10</a></li>
@@ -23,3 +17,4 @@
 
 	    	</ul>
 		</aside>
+		
