@@ -527,7 +527,7 @@ ul.rig li h3 {
    Post
 ------------*/
 
-section.post-section {
+section.post {
 	margin-top: 80px;
 }
 
@@ -556,32 +556,11 @@ img {
 	margin-bottom: 2.5em;
 }
 
-img.twitter-button {
-	float: none;
-	margin-bottom: 0;
-	position: fixed;
-	right: 3vh;
-	bottom: 3vh;
-	width: 9vh;
-	border-radius: 50%;
-	box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.28);
-	background-color: rgb(104, 198, 225);
-	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
-}
-
-img.twitter-button:hover {
-	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.31);
-}
-
-img.twitter-button:active {
-	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.36);
-}
-
 /*-----------------------
    Post Content
 -----------------------*/
 
-.post-section p {
+.post p {
 	width: 70%;
 }
 
@@ -605,15 +584,89 @@ p.img-description {
 }
 
 /*-----------------------
+   Guides
+-----------------------*/
+
+section.tag-guides {
+	width: 100%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section.tag-guides h2 {
+	width: 22%;
+	height: 0;
+	text-align: right;
+	margin-top: 2em;
+	margin-bottom: 0.1em;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+section.tag-guides h3 {
+	width: 72%;
+	margin-left: 25%;
+	margin-top: 2em;
+}
+
+section.tag-guides p {
+	width: 72%;
+	margin-left: 25%;
+	margin-top: 0em;
+	margin-bottom: 0.5em;
+}
+
+section.tag-guides ul {
+	padding-left: 27%;
+	width: 70%;
+	margin-left: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+section.tag-guides img {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/*-----------------------
    Footer
 -----------------------*/
 
 footer {
+	margin-top: 30px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 footer a {
 	color: black;
+}
+
+img.twitter-button, section.tag-guides img.twitter-button {
+	float: none;
+	margin-bottom: 0;
+	position: fixed;
+	right: 3vh;
+	bottom: 3vh;
+	width: 9vh;
+	max-width: 60px;
+	border-radius: 50%;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.28);
+	background-color: rgb(104, 198, 225);
+	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+img.twitter-button:hover {
+	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.31);
+}
+
+img.twitter-button:active {
+	box-shadow: 0 0 8px rgba(0,0,0,.18),0 4px 16px rgba(0,0,0,.36);
 }
 
 /*-----------------------
@@ -636,9 +689,9 @@ footer a {
 	}
 
 	h1.post-title {
-	    white-space: nowrap;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
 		width: 90%;
 	}
 
@@ -654,7 +707,7 @@ footer a {
 		text-overflow: ellipsis;
 	}
 
-	.post-section p {
+	.post p {
 		width: 80%;
 	}
 
@@ -670,6 +723,36 @@ footer a {
 
 	ul.rig li img {
 		margin-top: 0;
+	}
+
+	section.tag-guides {
+		width: 90%;
+	}
+
+	section.tag-guides h2 {
+		width: 100%;
+		height:auto;
+		text-align: left;
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+	}
+
+	section.tag-guides h3 {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 1.5em;
+		margin-bottom: 0.5em
+	}
+
+	section.tag-guides p {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	section.tag-guides ul {
+		margin-left: 0;
+		margin-top: 0em;
 	}
 
 }
@@ -692,8 +775,12 @@ footer a {
 		margin-top: 70px;
 	}
 
-	section.post-section {
+	section.post {
 		margin-top: 60px;
+	}
+
+	section.tag-guides {
+		margin-top: 80px;
 	}
 
 	h1.title {
@@ -720,7 +807,7 @@ footer a {
 		margin: 0 0 20px;
 	}
 
-	.post-section p {
+	.post p {
 		width: 100%;
 	}
 
