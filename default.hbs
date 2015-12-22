@@ -11,6 +11,25 @@
 	<meta name="theme-color" content="#1E1E1E">
 
 	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('img').each(function() {
+        var source = $(this).attr("src");
+        var len = source.length - 4;
+        if(source.substring(len, source.length) === ".jpg" && source.search("thumbnails") === -1) {
+          var short = source.substring(0, len);
+          $(this).attr("srcset", short + "-512.jpg 512w, " + short + "-1024.jpg 1024w, " + short + ".jpg 2048w");
+          $(this).attr("sizes", "(min-width: 32em) 63vw, 90vw");
+        };
+        if(source.substring(len, source.length) === ".jpg" && source.search("thumbnails") !== -1) {
+          var short = source.substring(0, len);
+          $(this).attr("srcset", short + "-256.jpg 256w, " + short + ".jpg 512w, " + short + "-1024.jpg 1024w");
+          $(this).attr("sizes", "(min-width: 68em) 22vw, (min-width: 50em) 29vw, (min-width: 32em) 44vw, 90vw");
+        };
+      });
+    });
+  </script>
 	<link href="{{asset "css/screen.css"}}" type="text/css" rel="stylesheet" />
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
 	<link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic" rel='stylesheet' type='text/css'>
@@ -18,7 +37,6 @@
 	<link rel="icon" type="image/png" href="{{asset "/images/favicon_64x64.png"}}" sizes="64x64">
 	<link rel="icon" type="image/png" href="{{asset "/images/favicon_32x32.png"}}" sizes="32x32">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	{{ghost_head}}
 

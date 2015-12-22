@@ -8,11 +8,11 @@ $(document).ready(function() {
 			if(page <= max_pages){
 				$('.rig').append($(content).find('.post'));
 				page = page + 1;
-			} 
-			if(page >= max_pages){
+			}
+			if(page > max_pages){
 				$('.loadmore').css({'display': 'none'});
 			}
 		});
 	});
-	
+
 });

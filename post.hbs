@@ -18,15 +18,12 @@
 
 				$('img').each(function() {
 					$(this).after("<div style='clear:both;'><!--clear--></div> ");
-
 					if($(this).attr("caption")) {
 		        		$(this).after( "<p class='img-description' >"+ $(this).attr("caption") +"</p>");
 					}
-
 					if($(this).attr("alt")) {
 						$(this).after( "<p class='img-title' >" + $(this).attr("alt") + "</p>" );
 					}
-
 				});
 			});
 		</script>
