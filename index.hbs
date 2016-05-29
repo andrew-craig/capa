@@ -3,22 +3,29 @@
 	<header>
 
     <!-- Top Bar -->
-		<nav class="main-navigation fade-header"
-		{{#if @blog.cover}}
-		style="background-color: linear-gradient(rgba(30, 30, 30, 0),rgba(30, 30, 30, 0));background-image: url({{@blog.cover}});"
+		{{^is "paged"}}
+			<nav class="main-navigation fade-header"
+				{{#if @blog.cover}}
+					style="background-color: linear-gradient(rgba(30, 30, 30, 0),rgba(30, 30, 30, 0));background-image: url({{@blog.cover}});"
+				{{else}}
+					style="background-color: linear-gradient(rgba(30, 30, 30, 0),rgba(30, 30, 30, 0)); background-image: url({{asset "images/header-background.jpg"}});"
+				{{/if}}
+			>
 		{{else}}
-		style="background-color: linear-gradient(rgba(30, 30, 30, 0),rgba(30, 30, 30, 0)); background-image: url({{asset "images/header-background.jpg"}});"
-		{{/if}}
-		>
+			<nav class="main-navigation fixed-header">
+		{{/is}}
+
 			<div class="hamburger">
 				<img src="{{asset "images/hamburger.svg"}}">
 			</div>
-
-			<h1 class="title">{{@blog.title}}</h1>
+			{{^is "paged"}}  <h1 class="title">  		{{else}}	<h1 class="title fixed-title">	{{/is}}
+				{{@blog.title}}
+			</h1>
 
 		</nav>
 
-		<div class="title-spacing"></div>
+		{{^is "paged"}}		<div class="title-spacing"></div>{{else}}	<div class="title-spacing-paged">	{{/is}}
+
 
 	</header>
 
@@ -43,11 +50,10 @@
 			{{/foreach}}
 		</ul>
 
-	{{pagination}}
+		{{pagination}}
 
     </section>
     <script>
     var max_pages = parseInt('{{pagination.pages}}');
     </script>
 	<script src="{{asset "js/index.js"}}"></script>
-	<script src="{{asset "js/loadMore.js"}}"></script>

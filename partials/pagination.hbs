@@ -1,6 +1,24 @@
-{{#if next}}
-<nav class="loadmore" role="navigation">
-	<button class="loadmorebutton">Load More</button>
+<nav class="pagination" role="navigation">
+	{{^is "paged"}}
+			{{#if next}}
+				<nav class="pagination" role="navigation">
+					<button class="loadmorebutton">Load More</button>
+				</nav>
+			{{/if}}
+	{{else}}
 
+			{{#if prev}}
+				<div class="nav-button left-nav-button">
+					<a class="newer-posts desktop" href="{{page_url prev}}">&lt;  Newer Posts</a>
+					<a class="newer-posts mobile" href="{{page_url prev}}">&lt;</a>
+				</div>
+    	{{/if}}
+    	{{#if next}}
+				<div class="nav-button right-nav-button">
+        	<a class="older-posts desktop" href="{{page_url next}}">Older Posts  &gt;</a>
+					<a class="older-posts mobile" href="{{page_url next}}">&gt;</a>
+				</div>
+    	{{/if}}
+			<span class="page-number">Page {{page}} of {{pages}}</span>
+	{{/is}}
 </nav>
-{{/if}}

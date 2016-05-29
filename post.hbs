@@ -28,14 +28,23 @@
 			});
 		</script>
 
-
 		{{content}}
 
-		<script language="JavaScript">
-			document.write("<a href='https://twitter.com/intent/tweet?screen_name=_andrewcraig&url=" + "{{url absolute="true"}}" + "'>");
+		{{#if author.twitter}}
+		<script>
+		var twitterUser = "{{author.twitter}}";
+		var URL = "{{url absolute="true"}}";
+		console.log(twitterUser);
+		console.log(twitterUser.substring(1,twitterUser.length));
+		document.write("<a href='https://twitter.com/intent/tweet?&url=" + URL + "&via=" + twitterUser.substring(1,twitterUser.length) + "'>");
 		</script>
-	    	  <img class="twitter-button" src="../assets/images/twitter.svg">
+		{{else}}
+		<a href='https://twitter.com/intent/tweet?&url={{url absolute="true"}}'>
+		{{/if}}
+	    <img class="twitter-button" src="../assets/images/twitter.svg">
 		</a>
 
+
 	</section>
+
 {{/post}}

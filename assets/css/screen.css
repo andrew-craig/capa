@@ -110,6 +110,10 @@ div.title-spacing-fixed {
 	height: 280px;
 }
 
+.title-spacing-paged {
+	height: 80px;
+}
+
 
 /*------------
    Side Bar
@@ -489,37 +493,74 @@ ul.rig li h3 {
    Load More
 -----------------------*/
 
-.loadmore {
+nav.pagination {
 	height: 60px;
 	width: 100%;
 }
 
-.loadmorebutton {
-	margin: auto;
+.loadmorebutton, .nav-button {
 	box-shadow: 0 0 3px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.24);
 	background: #D32F2F;
-	color: rgb(255,255,255);
 	background-clip: border-box;
-	text-align: center;
-  padding: 0 25px;
   border-radius: 2px;
   height: 36px;
-	position: relative;
 	border: none;
-	font-size: 1.5rem;
-	font-weight: 700;
-	display: block;
-	margin-top: 14px;
-	vertical-align: middle;
 	cursor: pointer;
 	transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
 }
 
-.loadmorebutton:hover {
+.loadmorebutton {
+	margin: auto;
+	text-align: center;
+	padding: 0 25px;
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-top: 14px;
+	display: block;
+
+	vertical-align: middle;
+	color: rgb(255,255,255);
+}
+
+.nav-button {
+	width: 140px;
+	display: inline-block;
+}
+
+.left-nav-button {
+	float: left;
+}
+
+.right-nav-button {
+	float: right;
+}
+
+.newer-posts, .older-posts {
+	margin: auto;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	vertical-align: middle;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	line-height: 36px;
+	display: block;
+}
+
+.page-number {
+	margin: 0 auto;
+	line-height: 36px;
+	width: 120px;
+	display: block;
+	text-align: center;
+}
+
+.loadmorebutton:hover, .nav-button:hover {
 	box-shadow: 0 0 4px rgba(0,0,0,.16),0 4px 8px rgba(0,0,0,.28);
 }
 
-.loadmorebutton:active {
+.loadmorebutton:active, .nav-button:hover {
 	box-shadow: 0 0 6px rgba(0,0,0,.24),0 4px 10px rgba(0,0,0,.31);
 }
 
@@ -686,10 +727,15 @@ img.twitter-button:active {
     display: none;
 }
 
+.mobile {
+	display: none;
+}
+
 @media (max-width: 68em) {
 	ul.rig li {
 		width: 31.83%; /* three columns */
 	}
+
 }
 
 @media (max-width: 50em) {
@@ -853,5 +899,21 @@ img.twitter-button:active {
   #mobile-indicator {
 		display: block;
   }
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.nav-button {
+		width: 50px;
+	}
+
+	.title-spacing-paged {
+		height: 0px;
+	}
 
 }

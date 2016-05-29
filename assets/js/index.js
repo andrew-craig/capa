@@ -49,7 +49,7 @@ function adjustTitle() {
 
 	if (scroll > 190) {
     $('.fixed-title').css(
-      {'font-size': '1.4em'}
+      {'font-size': '1.6em'}
     );
 	} else {
     $('.fixed-title').css(
@@ -93,4 +93,27 @@ $(document).ready(function() {
         $(this).removeClass('active');
         $('#sidebar').removeClass('open');
     });
+});
+
+$(document).ready(function() {
+  var hashLM1 = window.location.hash;
+  if (hashLM1 != "") {var page = parseInt(hashLM1.substring(1, hashLM1.length)) + 1;} else { var page = 2; }
+  var url_blog = "http://127.0.0.1:2368/";
+
+
+  $('.loadmorebutton').on('click', function() {
+  	$.get((url_blog + '/page/' + page),
+	  	function(content) {
+        if(page <= max_pages){
+          var fetchedposts = $(content).find('.post');
+          $('.rig').append(fetchedposts);
+          window.location.hash = page;
+          page = page + 1;
+        }
+			if(page > max_pages){
+				$('.pagination').css({'display': 'none'});
+			}
+		});
+	});
+
 });
