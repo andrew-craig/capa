@@ -1,6 +1,6 @@
 function isMobileWidth() {
     return $('#mobile-indicator').is(':visible');
-};
+}
 
 function debounce(func, wait, immediate) {
     var timeout;
@@ -15,7 +15,7 @@ function debounce(func, wait, immediate) {
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
     };
-};
+}
 
 function adjustTitle() {
 	var scroll = $(window).scrollTop(),
@@ -45,7 +45,7 @@ function adjustTitle() {
       {'font-size': '3em'}
     );
     title.removeClass('fixed-title');
-	};
+	}
 
 	if (scroll > 190) {
     $('.fixed-title').css(
@@ -56,7 +56,7 @@ function adjustTitle() {
       {'font-size': '' + size + 'em'}
     );
 	}
-};
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 	if (isMobileWidth()) {
@@ -93,27 +93,4 @@ $(document).ready(function() {
         $(this).removeClass('active');
         $('#sidebar').removeClass('open');
     });
-});
-
-$(document).ready(function() {
-  var hashLM1 = window.location.hash;
-  if (hashLM1 != "") {var page = parseInt(hashLM1.substring(1, hashLM1.length)) + 1;} else { var page = 2; }
-  var url_blog = "http://127.0.0.1:2368/";
-
-
-  $('.loadmorebutton').on('click', function() {
-  	$.get((url_blog + '/page/' + page),
-	  	function(content) {
-        if(page <= max_pages){
-          var fetchedposts = $(content).find('.post');
-          $('.rig').append(fetchedposts);
-          window.location.hash = page;
-          page = page + 1;
-        }
-			if(page > max_pages){
-				$('.pagination').css({'display': 'none'});
-			}
-		});
-	});
-
 });

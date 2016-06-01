@@ -771,6 +771,10 @@ img.twitter-button:active {
 		width: 22%;
 		padding-top: 20px;
 	}
+	
+	p.img-description {
+		width: 22%;
+	}
 
 	img {
 		margin-top: 20px;

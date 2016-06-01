@@ -53,7 +53,37 @@
 		{{pagination}}
 
     </section>
+
     <script>
-    var max_pages = parseInt('{{pagination.pages}}');
+		var max_pages = parseInt('{{pagination.pages}}');
+		var blog_url = "{{@blog.url}}";
+
+
+		$(document).ready(function() {
+		  var hashLM1 = window.location.hash;
+ 			var page = 2;
+		  if (hashLM1 !== "") page = parseInt( hashLM1.substring(1, hashLM1.length)) + 1;
+			if(page >= max_pages){
+				$(".pagination").css('display', 'none');
+			}
+
+
+		  $('.loadmorebutton').on('click', function() {
+				console.log(page);
+				console.log("URL=" + blog_url);
+		  	$.get((blog_url + "/page/" + page),
+			  	function(content) {
+		        if (page <= max_pages) {
+		          var fetchedposts = $(content).find('.post');
+							$('.rig').append(fetchedposts);
+		          window.location.hash = page;
+		          page++;
+		        }
+					if(page > max_pages){
+						$(".pagination").css('display', 'none');
+					}
+				});
+			});
+		});
     </script>
-	<script src="{{asset "js/index.js"}}"></script>
+		<script src="{{asset "js/index.js"}}"></script>
