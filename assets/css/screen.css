@@ -606,8 +606,7 @@ img {
 }
 
 p.img-title {
-	font-family: 'Playfair Display', serif;
-	font-style: italic;
+	font-family: 'PT Serif', serif;
 	font-size: 1.5em;
 	display: block;
 	margin-left: 104%;
@@ -650,8 +649,7 @@ section.tag-guides h2 {
 	text-align: right;
 	margin-top: 2em;
 	margin-bottom: 0.1em;
-	font-family: 'Playfair Display', serif;
-	font-style: italic;
+	font-family: 'PT Serif', serif;
 	font-size: 1.5em;
 	font-weight: normal;
 }
